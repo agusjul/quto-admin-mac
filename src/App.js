@@ -11,33 +11,12 @@ import {
 } from "react-router-dom";
 
 class App extends React.Component{
-  state={
-    manus : []
-  }
-
-  async componentDidMount(){
-    this.getPesanan()
-  }
-
-  getPesanan = () => {
-    const ref = firebase.firestore().collection("pesanan");
-    ref.onSnapshot((querySnapshot)=> {
-        const items = [];
-        querySnapshot.forEach((doc)=> {
-            items.push(doc.data());
-        });
-        console.log(items)
-        this.setState({
-            menus : items
-        })
-    })
-}
+  
 
   render(){
     return(
       <Router>
         <CustomPage/>
-        {console.log(this.state.manus)}
       </Router>
     )
   }
