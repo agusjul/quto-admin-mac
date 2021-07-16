@@ -27,7 +27,6 @@ const CustomPage = (props) => {
 			<Row className="flex-xl-nowrap vh-100">
 				<Col as={ CustomDrawer } xs={ 12 } md={ 3 } lg={2} className="h-auto"/>
 				<Col xs={ 12 } md={ 9 } lg={ 10 } className="h-100">
-                    
                     <div>
                         <Switch>
                             <Route path={`/pesanan`}>
